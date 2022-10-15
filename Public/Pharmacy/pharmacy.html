@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pharmacy</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" type="text/css" href="pharmacy.css">
+    <link rel="icon" href="logotitle.png" type="image">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="text/javascript" src="pharmacy.js" async></script>
+  </head>
+  <body>
+      
+    <section>
+      <div class="altmsg">
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <strong class="dis">NOW GET 15% OFF ON YOUR FIRST ORDER</strong>
+      <br /><br />
+        <p>Use Promo Code: <span class="promo">FIRST15</span></p>
+      </div>
+      </div>
+      <div class="content">
+        <div class="header">
+          <img src="logo.png" alt="logo" >
+          </div>
+          <span class="input-filter">
+            <ion-icon name="search"></ion-icon><input type="text" name="" id="filter" class="filter" placeholder="Enter" onkeyup="searchMedicine()" />
+          </span>
+          <li class="cart">
+              <a href="cart.html">
+                  <ion-icon name="cart-outline"></ion-icon>Cart<span>0</span>
+              </a> 
+          </li>
+          <h1 class="heading">PHARMA-CARE💊</h1>
+        <h2 class="description">Choose from variety of medicines across various categories</h2>
+        </div>
+        <div class="allcards" id="allcards">
+        <div class="medicinetype">
+        <h2>COVID PREVENTION</h2>
+      </div>
+     <div class="card-wrapper" id="card-wrapper">
+    <div class="card">
+    <img src="images/facemask.jpg" class="medicineimg" alt="medicine">
+    <div class="card-body">
+      <h5 class="medicinename">3 Ply Disposable Face Mask(Pack of 50)</h5>
+      <p class="medicinemfr">Mfr: Eliph Nutrition Pvt Ltd</p>
+      <div class="priceslash">
+      <del>
+      <span class="amount">Rs.450.00</span>
+      </del>
+      <span class="discount">(15% OFF)</span>
+      <ins>
+       <span class="amount">Rs.380.00</span>
+       </ins>
+       </div>
+       <div class="num">
+       <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+       </div>
+       <a class="add-cart"  href="javascript:void(0)">🛒 ADD TO CART</a>
+    </div>
+  </div>
+  <div class="card">
+  <img src="images/nycil.jpg" class="medicineimg" alt="medicine">
+  <div class="card-body">
+    <h5 class="medicinename">Nycil Herbal Hand Sanitizer</h5>
+    <p class="medicinemfr">Mfr: Zydus Wellness Product Ltd</p>
+    <div class="priceslash">
+    <del>
+    <span class="amount">Rs.250.00</span>
+    </del>
+    <span class="discount">(2% OFF)</span>
+    <ins>
+     <span class="amount">Rs.245.00</span>
+     </ins>
+     </div>
+     <div class="num">
+     <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+     </div>
+     <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+  </div>
+</div>
+<div class="card">
+<img src="images/wipes.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Sanitizing Wipes (70 Each) Pack of 2</h5>
+  <p class="medicinemfr">Mfr: Delhi Mediart Private Limited</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.470.00</span>
+  </del>
+  <span class="discount">(50% OFF)</span>
+  <ins>
+   <span class="amount">Rs.235.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+<div class="card">
+<img src="images/dettol.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Dettol Combo Pack(550ml)</h5>
+  <p class="medicinemfr">Mfr: Reckitt Benckiser</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.426.00</span>
+  </del>
+  <span class="discount">(11% OFF)</span>
+  <ins>
+   <span class="amount">Rs.376.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+  </div>
+  <div class="medicinetype">
+      <h2>Mineral Supplements</h2>
+    </div>
+    <div class="card-wrapper" id="card-wrapper">
+    <div class="card">
+    <img src="images/calcium.jpg" class="medicineimg" alt="medicine">
+    <div class="card-body">
+  <h5 class="medicinename">NutriLeon Calcium Vitamin D3 Tablet</h5>
+  <p class="medicinemfr">Mfr: Inlife Pharma Pvt Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.449.00</span>
+  </del>
+  <span class="discount">(15% OFF)</span>
+  <ins>
+   <span class="amount">Rs.331.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+<div class="card">
+<img src="images/zincovit.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Zincovit Tablet</h5>
+  <p class="medicinemfr">Mfr:  Apex Laboratories Pvt Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.105.00</span>
+  </del>
+  <span class="discount">(10% OFF)</span>
+  <ins>
+   <span class="amount">Rs.94.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+<div class="card">
+<img src="images/revital.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Revital H Woman Tablet</h5>
+  <p class="medicinemfr">Sun Pharmaceutical Industries Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.345.00</span>
+  </del>
+  <span class="discount">(10% OFF)</span>
+  <ins>
+   <span class="amount">Rs.311.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+<div class="card">
+<img src="images/chic.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Chicnutrix Bounce Hair Recovery Complex</h5>
+  <p class="medicinemfr">Mfr: Luxifer Beauty Nutrition Pvt Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.720.00</span>
+  </del>
+  <span class="discount">(12% OFF)</span>
+  <ins>
+   <span class="amount">Rs.634.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+</div>
+<div class="medicinetype">
+    <h2>FEVER AND PAIN MANAGEMENT</h2>
+  </div>
+  <div class="card-wrapper" id="card-wrapper">
+<div class="card">
+<img src="images/digital.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Thermometer and Pulse Oximeter</h5>
+  <p class="medicinemfr">Mfr: Vandelay Pvt Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount" style="font-size:15px;font-weight:520;">Rs.5998.00</span>
+  </del>
+  <span class="discount" style="font-size:15px;font-weight:580;">(69% OFF)</span>
+  <ins>
+   <span class="amount"style="font-size:20px;font-weight:530;">Rs.1838.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+<div class="card">
+<img src="images/calpol.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Calpol Tablet</h5>
+  <p class="medicinemfr">Mfr: GSK Pvt Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.30.00</span>
+  </del>
+  <span class="discount">(7% OFF)</span>
+  <ins>
+   <span class="amount">Rs.28.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+<div class="card">
+<img src="images/digi.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Dr.Odin Digital Thermometer</h5>
+  <p class="medicinemfr">Mfr: Netgen World</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.230.00</span>
+  </del>
+  <span class="discount">(7% OFF)</span>
+  <ins>
+   <span class="amount">Rs.213.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+<div class="card">
+<img src="images/crocin.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Crocin Max</h5>
+  <p class="medicinemfr">Mfr: GSK Pvt Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.40.00</span>
+  </del>
+  <span class="discount">(12% OFF)</span>
+  <ins>
+   <span class="amount">Rs.35.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+</div>
+<div class="medicinetype">
+    <h2>BABY CARE</h2>
+  </div>
+  <div class="card-wrapper" id="card-wrapper">
+<div class="card">
+<img src="images/pampers.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Pampers Dry Pants(Pack of 66)</h5>
+  <p class="medicinemfr">Mfr: Pampers Pvt Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.894.00</span>
+  </del>
+  <span class="discount">(20% OFF)</span>
+  <ins>
+   <span class="amount">Rs.715.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+<div class="card">
+<img src="images/bena.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Benadryl Kids Cough Syrup</h5>
+  <p class="medicinemfr">Mfr: Infolite Pvt Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.120.00</span>
+  </del>
+  <span class="discount">(9% OFF)</span>
+  <ins>
+   <span class="amount">Rs.109.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+<div class="card">
+<img src="images/nasi.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Nasivion Kids Nasal Drop </h5>
+  <p class="medicinemfr">Mfr: Merck Pvt Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.150.00</span>
+  </del>
+  <span class="discount">(10% OFF)</span>
+  <ins>
+   <span class="amount">Rs.135.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+<div class="card">
+<img src="images/cerelac.jpg" class="medicineimg" alt="medicine">
+<div class="card-body">
+  <h5 class="medicinename">Cerelac Wheat Apple Cereal</h5>
+  <p class="medicinemfr">Mfr: Nestle Pvt Ltd</p>
+  <div class="priceslash">
+  <del>
+  <span class="amount">Rs.200.00</span>
+  </del>
+  <span class="discount">(20% OFF)</span>
+  <ins>
+   <span class="amount">Rs.160.00</span>
+   </ins>
+   </div>
+   <div class="num">
+   <input class="numberbox" type="number" id="number" value="1" min="1" max="5" />
+   </div>
+   <a class="add-cart" href="javascript:void(0)">🛒 ADD TO CART</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="ft">
+  <div class="main-content">
+    <div class="left box">
+      <h2>
+About us</h2>
+<div class="content">
+        <p class="abt">
+Quara Healthcare is the best healthcare in the city run by the world's best doctors who have more than 20 years of experience</p>
+<div class="social">
+  <a href="https://www.facebook.com/" target="_blank"><span class="fab fa-facebook-f"></span></a>
+  <a href="https://twitter.com/" target="_blank"><span class="fab fa-twitter"></span></a>
+  <a href="https://www.instagram.com/" target="_blank"><span class="fab fa-instagram"></span></a>
+  <a href="https://www.youtube.com/" target="_blank"><span class="fab fa-youtube"></span></a>
+        </div>
+</div>
+</div>
+<div class="center box">
+      <h2>
+Address</h2>
+<div class="content">
+        <div class="place">
+          <span class="fas fa-map-marker-alt"></span>
+          <span class="text">Kormangala, Bangalore</span>
+        </div>
+        <div class="phone">
+          <span class="fas fa-phone"></span>
+          <span class="text">+089-765432100</span>
+        </div>
+        <div class="email">
+          <span class="fas fa-envelope"></span>
+          <span class="text">quarahealthcare@gmail.com</span>
+        </div>
+</div>
+</div>
+<div class="right box">
+      <h2>Navigation</h2>
+
+<div class="content">
+         <a href="../index.html"><div class="h">Home</div></a>
+         <a href="../Consultation/CONSULTATION.html"><div class="h">Consultation</div></a>
+         <a href="Pharmacy.html"><div class="h">Pharmacy</div></a>
+         <a href="../Covid/covid.html"><div class="h">Covid-19</div></a>
+         <a href="../Teampage/teampage.html"><div class="h">Our Team</div></a>
+         </div>
+
+
+<div class="bottom">
+<div class="ft">
+      <span class="credit">Created By <a href=" ">Quara Healthcare</a>  </span>
+      <span class="far fa-copyright"></span>
+      <span class="rights">2020 All rights reserved.</span>
+</div>
+</div>
+</div>
+</footer>
+
+  </body>
+</html>
