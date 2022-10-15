@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping-Cart</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" type="text/css" href="payment.css">
+    <link rel="icon" href="logotitle.png" type="image">
+    <script type="text/javascript" src="payment.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <div class="header">
+    <img src="logo.png" alt="logo" >
+    </div>
+<article class="card">
+	<div class="container">
+		<div class="card-title">
+			<h2>PAYMENT <ion-icon name="wallet"></ion-icon></h2>
+		</div>
+		<div class="card-body">
+			<div class="payment-type">
+				<h4>Choose payment method below</h4>
+				<div class="types flex justify-space-between">
+					<div class="type selected">
+						<div class="logo">
+							<i class="far fa-credit-card"></i>
+						</div>
+						<div class="text">
+							<p>Pay with Credit Card</p>
+						</div>
+					</div>
+					<div class="type">
+						<div class="logo">
+							<ion-icon name="cash-outline"></ion-icon>
+						</div>
+						<div class="text">
+							<button class="open-button" onclick="openForm()"><p>Cash on Delivery</p></button>
+              <div class="form-popup" id="myForm">
+                <h5>Currently we are not accepting any <span>Cash on Delivery</span> orders adhering to COVID-19 safety protocols</h5>
+                <button type="book" class="btn cancel" onclick="closeForm()">Close</button>
+                <script>
+                function openForm() {
+               document.getElementById("myForm").style.display = "block";
+               }
+               function closeForm() {
+               document.getElementById("myForm").style.display = "none";
+               }
+                </script>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="payment-info flex justify-space-between">
+        <form class="form-container" method="POST" action="/payment">
+				<div class="column billing">
+					<div class="title">
+						<div class="num">1</div>
+						<h4>Billing Info</h4>
+					</div>
+					<div class="field full">
+						<label for="name">Full Name</label>
+						<input id="name" type="text" name="Fullname" placeholder="Full Name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
+					</div>
+					<div class="field full">
+						<label for="address">Billing Address</label>
+						<input id="address" name="Address" type="text" placeholder="Billing Address" pattern="{2,}" required>
+					</div>
+					<div class="flex justify-space-between">
+            <div class="citystate" onload="resetSelection()">
+            <select id="countrySelect" size="1" onchange="makeSubmenu(this.value)" required>
+            <option value="" disabled selected>Choose State</option>
+            <option>Andhra_Pradesh</option>
+            <option>Arunachal_Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Jammu_and_Kashmir</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Maharashtra</option>
+            <option>Meghalaya</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>TamilNadu</option>
+            <option>UttarPradesh</option>
+            <option>Uttarakhand</option>
+            <option>West_Bengal</option>
+            </select>
+            <select id="citySelect" size="1" required>
+            <option value="" disabled selected>Choose City</option>
+            <option></option>
+            </select>
+            </div>
+					</div>
+					<div class="field full">
+						<label for="zip">Zip</label>
+						<input id="zip" type="text" name="zip" placeholder="Zip" pattern="[0-9]{2,}" maxlength="6" minlength="6" required>
+					</div>
+				</div>
+				<div class="column shipping">
+					<div class="title">
+						<div class="num">2</div>
+						<h4>Credit Card Info</h4>
+					</div>
+					<div class="field full">
+						<label for="name">Cardholder Name</label>
+						<input id="name" name="Card_holders_name" type="text" placeholder="Full Name" pattern="[a-zA-Z][a-zA-Z ]{5,}" required>
+					</div>
+					<div class="field full">
+						<label for="address">Card Number</label>
+						<input id="address" name="Card_number" type="text" placeholder="1234-5678-9012-3456" pattern="[0-9]{2,}" maxlength="16" minlength="16" required>
+					</div>
+					<div class="flex justify-space-between">
+						<div class="field half">
+							<label for="city">Exp. Month</label>
+							<input id="city" name="Expiry_month" type="text" placeholder="12" pattern="[0-9]{2,}" maxlength="2" minlength="2" required>
+						</div>
+						<div class="field half">
+							<label for="state">Exp. Year</label>
+							<input id="state" name="Expiry_year" type="text" placeholder="19" pattern="[0-9]{2,}" maxlength="2" minlength="2" required>
+						</div>
+					</div>
+					<div class="field full">
+						<label for="zip">CVV Number</label>
+						<input id="zip" name="CVC_number"type="text" placeholder="468" pattern="[0-9]{2,}" maxlength="3" minlength="3" required>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-actions flex justify-space-between">
+			<div class="flex-start">
+				<button class="button button-secondary">Return to Cart</button>
+			</div>
+			<div class="flex-end">
+				<button class="button button-primary" >Proceed</button>
+			</div>
+		</div>
+  </form>
+	</div>
+</article>
+</body>
+</html>
