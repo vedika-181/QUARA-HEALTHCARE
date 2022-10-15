@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quara Healthcare Login-Sign Up</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Login-SignUp.css">
+    <link rel="icon" href="logotitle.png" type="image">
+    
+</head>
+<body>
+    
+    <!-- Log in  Form -->
+    <div class="back">
+        <div class="header">
+            <img class="logo" src="logo.png" alt="logo" >
+        </div>
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                  <button type="button" class="toggle-button" onclick="login()">Log In</button>
+                  <button type="button" class="toggle-button" onclick="register()">Sign Up</button>           
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><img src="fb.png"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="twt.png"></a>
+                <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank"><img src="google.png"></a>
+            </div> 
+            <form  id="login" class="input-group" action="/login" method="POST">
+                <input type="email" class="input-field" id="username" name="LoginEmail" placeholder="Email ID" minlength="6" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <input type="password" class="input-field" id="password" name="LoginPassword" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required>
+                <input type="checkbox" class="check-box" id="rp">
+                <label for="rp">Remember Password</label><br>
+                <input type="checkbox" class="check-box" id="sp" onclick="myFunction()">
+                <label for="sp">Show Password</label>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>  
+            <form id="register" class="input-group" action="/register" method="POST">
+                <input type="text" class="input-field" id="name" placeholder="Name" name="Name" minlength="6" title="Must have more than 6 characters" required>
+                <input type="email" class="input-field" id="email" placeholder="E-mail ID" name="RegisterEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                <input type="tel" class="input-field" id = "phone" name="PhoneNumber" value="" placeholder="Phone Number"   pattern="[0-9]{10}" required >
+                <input type="password" class="input-field" id="password" name="RegisterPassword" value="" placeholder="Password"  required >
+                <input type="checkbox" class="check-box" id="tc" required>
+                <label for="tc">I agree to the Terms & Condition</label><br>
+                <input type="checkbox" class="check-box" id="sp" onclick="myFunction1()">
+                <label for="sp">Show Password</label>
+                <button type="submit" class="submit-btn" >Sign Up</button>
+            </form>
+
+            
+        </div>
+        <a href="../index.html" class="return">RETURN TO HOMEPAGE</a>
+    </div>
+
+    <script src="Login-SignUp.js"> </script>
+</body>
+</html>
