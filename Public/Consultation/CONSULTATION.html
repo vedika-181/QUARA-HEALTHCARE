@@ -1,0 +1,399 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulatation Page</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+      <link rel="stylesheet" type="text/css" href="CONSULTATION.css">
+      <link rel="icon" href="logotitle.png" type="image">
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script type="text/javascript" src="CONSULTATION.js" async></script>
+
+
+                    <script>
+                       document.addEventListener('DOMContentLoaded',function(){
+                         document.querySelector('#b1').onclick=function(){
+                           var email =document.querySelector('#email');
+                           var emailformat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+                           if(email.value.match(emailformat)){
+                             return true;
+                           }
+                           else{
+                             alert("You have entered an invalid email address!");
+                             email.focus();
+                             return false;
+                           }
+                        };
+                      });
+                    </script>
+
+  </head>
+  <body>
+    <section>
+      <div class="altmsg">
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <strong class="dis">NOW GET 25% OFF ON YOUR FIRST APPOINTMENT</strong>
+      <br /><br />
+        <p>Use Promo Code: <span class="promo">FIRST25</span></p>
+      </div>
+      </div>
+      <div class="content">
+        <div class="header">
+          <img src="logo.png" alt="logo" >
+          </div>
+          <span class="input-filter">
+            <ion-icon name="search"></ion-icon><input type="text" name="" id="filter" class="filter" placeholder="Enter" onkeyup="searchDoctor()" />
+          </span>
+          <h1 class="heading">BOOK YOUR APPOINTMENT🩺</h1>
+        <h2 class="description">Consult with top Doctors across specialities over</h2>
+       <h2 class="chat">Chat,Video and Voice calls</h2>
+        </div>
+        <div class="card-wrapper" id="card-wrapper">
+        <div class="card">
+        <img src="https://im-media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2019-06/08BA4823-5BB8-4979-B437-38769B841388.jpg?itok=KmxsN2xZ" alt="Profile Picture" class="profile-img">
+        <h1>Dr. Satish Kumar</h1>
+        <h2 class="speciality">Cardiologist</h2>
+          <ul class="about">
+            <li>MBBS,MD,DM,DNB</li>
+              <li>24 Years Experience</li>
+              <li>Consultation Fees: Rs.800</li>
+            </ul>
+            <button class="open-button" onclick="openForm1()">BOOK NOW</button>
+            <div class="form-popup" id="myForm1">
+            <form class="form-container" action="/Consultation" method="POST">
+              <h1>Please fill in the following details:</h1>
+              <label for="name"><b>Patient's Name</b></label>
+              <input type="text" placeholder="Enter Name" id="name" name="name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" id="email" name="email" required>
+              <label for="phone"><b>Contact</b></label>
+              <input type="tel" placeholder="Enter Contact Number" id="phone" name="phone" pattern="[0-9]{2,}" maxlength="10" minlength="10" required>
+              <input type="hidden" id="doctor" name="doctor" value="Dr. Satish Kumar">
+              <button id="b1"  type="submit" class="btn">Book My Appointment</button>
+              <button type="book" class="btn cancel" onclick="closeForm1()">Close</button>
+              <script>
+              function openForm1() {
+             document.getElementById("myForm1").style.display = "block";
+             }
+             function closeForm1() {
+             document.getElementById("myForm1").style.display = "none";
+             }
+             
+              </script>
+            </form>
+          </div>
+            <h3 class="ratings">⭐⭐⭐⭐</h3>
+        </div>
+        <div class="card">
+        <img src="https://f7b4p3f8.stackpathcdn.com/wp-content/uploads/2020/08/Indian-Amercian-Appoined-as-New-York-City-health-commissioner.jpg" alt="Profile Picture" class="profile-img">
+        <h1>Dr. Harish Agarwal</h1>
+        <h2 class="speciality">General Physician</h2>
+          <ul class="about">
+            <li>MBBS,MD</li>
+              <li>15 Years Experience</li>
+              <li>Consultation Fees: Rs.500</li>
+            </ul>
+            <button class="open-button" onclick="openForm2()">BOOK NOW</button>
+            <div class="form-popup" id="myForm2">
+            <form class="form-container" action="/Consultation" method="POST">
+              <h1>Please fill in the following details:</h1>
+              <label for="name"><b>Patient's Name</b></label>
+              <input type="text" placeholder="Enter Name" id="name" name="name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" id="email" name="email" required>
+              <label for="phone"><b>Contact</b></label>
+              <input type="tel" placeholder="Enter Phone number" id="phone" name="phone" pattern="[0-9]{2,}" maxlength="10" minlength="10" required>
+              <input type="hidden" id="doctor" name="doctor" value="Dr. Harish Agarwal">
+              <button type="submit" id="b1" class="btn">Book My Appointment</button>
+              <button type="book" class="btn cancel" onclick="closeForm2()">Close</button>
+              <script>
+              function openForm2() {
+            document.getElementById("myForm2").style.display = "block";
+          }
+          function closeForm2() {
+          document.getElementById("myForm2").style.display = "none";
+          }
+              </script>
+            </form>
+          </div>
+
+            <h3 class="ratings">⭐⭐⭐</h3>
+        </div>
+        <div class="card">
+        <img src="https://www.sriramachandra.edu.in/medical/oldmanager/images/doctors/dhanalakshmi-final.jpg" alt="Profile Picture" class="profile-img">
+        <h1>Dr. Dhanalakshmi</h1>
+        <h2 class="speciality">Gynaecologist</h2>
+          <ul class="about">
+            <li>MBBS,DGO,MRCOG</li>
+              <li>25 Years Experience</li>
+              <li>Consultation Fees: Rs.700</li>
+            </ul>
+            <button class="open-button" onclick="openForm3()">BOOK NOW</button>
+            <div class="form-popup" id="myForm3">
+            <form class="form-container" action="/Consultation" method="POST">
+              <h1>Please fill in the following details:</h1>
+              <label for="name"><b>Patient's Name</b></label>
+              <input type="text" placeholder="Enter Name" id="name" name="name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" id="email" name="email" required>
+              <label for="phone"><b>Contact</b></label>
+              <input type="tel" placeholder="Enter Phone number" id="phone" name="phone" pattern="[0-9]{2,}" maxlength="10" minlength="10" required>
+              <input type="hidden" id="doctor" name="doctor" value="Dr. Dhanalakshmi">
+              <button id="b1" class="btn" type="submit">Book My Appointment</button>
+              <button type="book" class="btn cancel" onclick="closeForm3()">Close</button>
+              <script>
+              function openForm3() {
+            document.getElementById("myForm3").style.display = "block";
+          }
+          function closeForm3() {
+          document.getElementById("myForm3").style.display = "none";
+          }
+      
+              </script>
+            </form>
+          </div>
+
+            <h3 class="ratings">⭐⭐⭐⭐</h3>
+        </div>
+        <div class="card">
+        <img src="https://threebestrated.in/images/DrAmitGuptaMBBSMDDMOLIVEHEARTCARECENTRE-Chandigarh-CH.jpeg" alt="Profile Picture" class="profile-img">
+        <h1>Dr. Sudheer Saxena</h1>
+        <h2 class="speciality">Pediatrician</h2>
+          <ul class="about">
+            <li>MBBS,DCH,DNB</li>
+              <li>19 Years Experience</li>
+              <li>Consultation Fees: Rs.400</li>
+            </ul>
+            <button class="open-button" onclick="openForm4()">BOOK NOW</button>
+            <div class="form-popup" id="myForm4">
+            <form class="form-container" action="/Consultation" method="POST">
+              <h1>Please fill in the following details:</h1>
+              <label for="name"><b>Patient's Name</b></label>
+              <input type="text" placeholder="Enter Name" id="name" name="name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" id="email" name="email" required>
+              <label for="phone"><b>Contact</b></label>
+              <input type="tel" placeholder="Enter Phone number" id="phone" name="phone" pattern="[0-9]{2,}" maxlength="10" minlength="10" required>
+              <input type="hidden" id="doctor" name="doctor" value="Dr. Sudheer Saxena">
+              <button id="b1" type="submit" class="btn" >Book My Appointment</button>
+              <button type="book" class="btn cancel" onclick="closeForm4()">Close</button>
+              <script>
+              function openForm4() {
+            document.getElementById("myForm4").style.display = "block";
+          }
+          function closeForm4() {
+          document.getElementById("myForm4").style.display = "none";
+          }
+        
+              </script>
+            </form>
+          </div>
+
+            <h3 class="ratings">⭐⭐⭐</h3>
+        </div>
+        <div class="card">
+        <img src="https://www.sriramachandra.edu.in/medical/oldmanager/images/doctors/usha-final_1411740980.jpg" alt="Profile Picture" class="profile-img">
+        <h1>Dr. Usha Rani</h1>
+        <h2 class="speciality">Neurologist</h2>
+          <ul class="about">
+            <li>MBBS,MD,DM</li>
+              <li>25 Years Experience</li>
+              <li>Consultation Fees: Rs.600</li>
+            </ul>
+            <button class="open-button" onclick="openForm5()">BOOK NOW</button>
+            <div class="form-popup" id="myForm5">
+            <form class="form-container" action="/Consultation" method="POST">
+              <h1>Please fill in the following details:</h1>
+              <label for="name"><b>Patient's Name</b></label>
+              <input type="text" placeholder="Enter Name" id="name" name="name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" id="email" name="email" required>
+              <label for="phone"><b>Contact</b></label>
+              <input type="tel" placeholder="Enter Phone number" id="phone" name="phone" pattern="[0-9]{2,}" maxlength="10" minlength="10" required>
+              <input type="hidden" id="doctor" name="doctor" value="Dr. Usha Rani">
+              <button id="b1" type="submit" class="btn" >Book My Appointment</button>
+              <button type="book" class="btn cancel" onclick="closeForm5()">Close</button>
+              <script>
+              function openForm5() {
+            document.getElementById("myForm5").style.display = "block";
+          }
+          function closeForm5() {
+          document.getElementById("myForm5").style.display = "none";
+          }
+              </script>
+            </form>
+          </div>
+
+            <h3 class="ratings">⭐⭐⭐⭐</h3>
+        </div>
+        <div class="card">
+        <img src="https://www.indiansinkuwait.com/NewsFile/157201604158284nampoory.jpg" alt="Profile Picture" class="profile-img">
+        <h1>Dr. Amit Srivastava</h1>
+        <h2 class="speciality">Oncologist</h2>
+          <ul class="about">
+            <li>MBS,MD Radiation Oncology</li>
+              <li>16 Years Experience</li>
+              <li>Consultation Fees: Rs.700</li>
+            </ul>
+            <button class="open-button" onclick="openForm6()">BOOK NOW</button>
+            <div class="form-popup" id="myForm6">
+            <form class="form-container" action="/Consultation" method="POST">
+              <h1>Please fill in the following details:</h1>
+              <label for="name"><b>Patient's Name</b></label>
+              <input type="text" placeholder="Enter Name" id="name" name="name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" id="email" name="email" required>
+              <label for="phone"><b>Contact</b></label>
+              <input type="tel" placeholder="Enter Phone number" id="phone" name="phone" pattern="[0-9]{2,}" maxlength="10" minlength="10" required>
+              <input type="hidden" id="doctor" name="doctor" value="Dr. Amit Srivastava">
+              <button id="b1" type="submit" class="btn" >Book My Appointment</button>
+              <button type="book" class="btn cancel" onclick="closeForm6()">Close</button>
+              <script>
+              function openForm6() {
+            document.getElementById("myForm6").style.display = "block";
+          }
+          function closeForm6() {
+          document.getElementById("myForm6").style.display = "none";
+          }
+              </script>
+            </form>
+          </div>
+
+            <h3 class="ratings">⭐⭐⭐</h3>
+        </div>
+        <div class="card">
+        <img src="https://files.medstro.com/image/upload/f_auto/v1427555442/user_avatars/11367.jpg" alt="Profile Picture" class="profile-img">
+        <h1>Dr. Aparna Jaiswal</h1>
+        <h2 class="speciality">Dermatologist</h2>
+          <ul class="about">
+            <li>MBBS,MD,DM</li>
+              <li>11 Years Experience</li>
+              <li>Consultation Fees: Rs.400</li>
+            </ul>
+            <button class="open-button" onclick="openForm7()">BOOK NOW</button>
+            <div class="form-popup" id="myForm7">
+            <form class="form-container" action="/Consultation" method="POST">
+              <h1>Please fill in the following details:</h1>
+              <label for="name"><b>Patient's Name</b></label>
+              <input type="text" placeholder="Enter Name" id="name" name="name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" id="email" name="email" required>
+              <label for="phone"><b>Contact</b></label>
+              <input type="tel" placeholder="Enter Phone number" id="phone" name="phone" pattern="[0-9]{2,}" maxlength="10" minlength="10" required>
+              <input type="hidden" id="doctor" name="doctor" value="Dr. Aparna Jaiswal">
+              <button id="b1" type="submit" class="btn" >Book My Appointment</button>
+              <button type="book" class="btn cancel" onclick="closeForm7()">Close</button>
+              <script>
+              function openForm7() {
+            document.getElementById("myForm7").style.display = "block";
+          }
+          function closeForm7() {
+          document.getElementById("myForm7").style.display = "none";
+          }
+          
+              </script>
+            </form>
+          </div>
+
+
+            <h3 class="ratings">⭐⭐⭐</h3>
+        </div>
+        <div class="card">
+        <img src="https://www.indialaparoscopysurgerysite.com/blog/wp-content/uploads/2020/03/Dr.-Anjila-Aneja.png" alt="Profile Picture" class="profile-img">
+        <h1>Dr. Arunava Datta</h1>
+        <h2 class="speciality">Psychiatrist</h2>
+          <ul class="about">
+            <li>MBS,MD</li>
+              <li>12 Years Experience</li>
+              <li>Consultation Fees: Rs.450</li>
+            </ul>
+            <button class="open-button" onclick="openForm8()">BOOK NOW</button>
+            <div class="form-popup" id="myForm8">
+            <form class="form-container" action="/Consultation" method="POST">
+              <h1>Please fill in the following details:</h1>
+              <label for="name"><b>Patient's Name</b></label>
+              <input type="text" placeholder="Enter Name" id="name" name="name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
+              <label for="email"><b>Email</b></label>
+              <input type="email" placeholder="Enter Email" id="email" name="email" required>
+              <label for="phone"><b>Contact</b></label>
+              <input type="tel" placeholder="Enter Phone number" id="phone" name="phone" pattern="[0-9]{2,}" maxlength="10" minlength="10" required>
+              <input type="hidden" id="doctor" name="doctor" value="Dr. Arunava Datta">
+              <button id="b1" type="submit" class="btn">Book My Appointment</button>
+              <button type="book" class="btn cancel" onclick="closeForm8()">Close</button>
+              <script>
+              function openForm8() {
+            document.getElementById("myForm8").style.display = "block";
+          }
+          function closeForm8() {
+          document.getElementById("myForm8").style.display = "none";
+          }
+         
+              </script>
+            </form>
+          </div>
+
+
+            <h3 class="ratings">⭐⭐⭐</h3>
+        </div>
+          </div>
+        </section>
+        <footer class="ft">
+          <div class="main-content">
+            <div class="left box">
+              <h2>
+    About us</h2>
+    <div class="content">
+                <p class="abt">
+    Quara Healthcare is the best healthcare in the city run by the world's best doctors who have more than 20 years of experience</p>
+    <div class="social">
+                  <a href="https://www.facebook.com/" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                  <a href="https://twitter.com/" target="_blank"><span class="fab fa-twitter"></span></a>
+                  <a href="https://www.instagram.com/" target="_blank"><span class="fab fa-instagram"></span></a>
+                  <a href="https://www.youtube.com/" target="_blank"><span class="fab fa-youtube"></span></a>
+                </div>
+    </div>
+    </div>
+    <div class="center box">
+              <h2>
+    Address</h2>
+    <div class="content">
+                <div class="place">
+                  <span class="fas fa-map-marker-alt"></span>
+                  <span class="text">Kormangala, Bangalore</span>
+                </div>
+                <div class="phone">
+                  <span class="fas fa-phone"></span>
+                  <span class="text">+089-765432100</span>
+                </div>
+                <div class="email">
+                  <span class="fas fa-envelope"></span>
+                  <span class="text">quarahealthcare@gmail.com</span>
+                </div>
+    </div>
+    </div>
+    <div class="right box">
+              <h2>Navigation</h2>
+
+    <div class="content">
+                 <a href="../index.html "><div class="h">Home</div></a>
+                 <a href="CONSULTATION.html"><div class="h">Consultation</div></a>
+                 <a href="../Pharmacy/Pharmacy.html"><div class="h">Pharmacy</div></a>
+                 <a href="../Covid/covid.html"><div class="h">Covid-19</div></a>
+                 <a href="../Teampage/teampage.html "><div class="h">Our Team</div></a>
+                 </div>
+
+
+    <div class="bottom">
+    <div class="ft">
+              <span class="credit">Created By <a href=" ">Quara Healthcare</a>  </span>
+              <span class="far fa-copyright"></span>
+              <span class="rights">2020 All rights reserved.</span>
+    </div>
+    </div>
+    </div>
+  </footer>
+      </body>
+
+      </html>
+
