@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> Contact Us</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo.png" type="image">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS-->
+    <link href="form.css" rel="stylesheet" type="text/css">
+
+    <!--AOS CSS CDN-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/49a30be9eb.js" crossorigin="anonymous"></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+
+<script>
+   document.addEventListener('DOMContentLoaded',function(){
+     document.querySelector('#submit').onclick=function(){
+       var email =document.querySelector('#email');
+       var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       if(email.value.match(emailformat)){
+
+         return true;
+       }
+       else{
+         alert("You have entered an invalid email address!");
+         email.focus();
+         return false;
+       }
+    };
+  });
+</script>
+
+</head>
+<body>
+
+    <section class="contact">
+        <div class="text-content">
+          <h1 data-aos="flip-up"><b>Do you have any Query?</b></h1>
+          <p data-aos="flip-down">If you need help just write </p>
+        </div>
+        <div class="map-content">
+          <div id="map"></div>
+        </div>
+         <div data-aos="fade-right" class="contact-form">
+           <div class="card">
+             <span data-aos="flip-right" class="card-title">Get in Touch</span>
+             <div class="card-content">
+               <form id="myform" action="/Feedback" method="POST">
+                 <div data-aos="flip-right" data-aos-delay="300">
+                  <input type="text" id="name" placeholder="Name" name="name" pattern="[a-zA-Z][a-zA-Z ]{2,}" required>
+                 </div>
+                 <div data-aos="flip-right" data-aos-delay="400">
+                  <input type="text" id="email" name="email" placeholder="Email" required>
+                 </div>
+                 <div data-aos="flip-right" data-aos-delay="500">
+                  <textarea type="text" id="msg" name="msg" placeholder="Message" required></textarea>
+                 </div>
+                 <input id="submit" type="submit" onclick="sendData()" data-aos="flip-right" data-aos-delay="600" class="btn waves-effect">
+                 
+               </form>
+             </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+            <div class="main-content">
+              <div class="left box">
+                <h2>
+      About us</h2>
+      <div class="content">
+                  <p class="abt">
+      Quara Healthcare is the best healthcare in the city run by the world's best doctors who have more than 20 years of experience</p>
+      <div class="social">
+                    <a href="https://www.facebook.com/" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                    <a href="https://twitter.com/" target="_blank"><span class="fab fa-twitter"></span></a>
+                    <a href="https://www.instagram.com/" target="_blank"><span class="fab fa-instagram"></span></a>
+                    <a href="https://www.youtube.com/" target="_blank"><span class="fab fa-youtube"></span></a>
+                  </div>
+      </div>
+      </div>
+      <div class="center box">
+                <h2>
+      Address</h2>
+      <div class="content">
+                  <div class="place">
+                    <span class="fas fa-map-marker-alt"></span>
+                    <span class="text">Kormangala, Bangalore</span>
+                  </div>
+      <div class="phone">
+                    <span class="fas fa-phone-alt"></span>
+                    <span class="text">+089-765432100</span>
+                  </div>
+      <div class="email">
+                    <span class="fas fa-envelope"></span>
+                    <span class="text">quarahealthcare@gmail.com</span>
+                  </div>
+      </div>
+      </div>
+      <div class="right box">
+                <h2>Navigation</h2>
+
+      <div class="content">
+                 <a href="../index.html"><div class="#">Home</div></a>
+                  <a href="../Consultation/CONSULTATION.html"><div class="#">Consultation</div></a>
+                    <a href="../Pharmacy/Pharmacy.html"><div class="#">Pharmacy</div></a>
+                     <a href="../Covid/covid.html"><div class="#">Covid-19</div></a>
+                      <a href="../Teampage/teampage.html"><div class="#">Our Team</div></a>
+
+                      </div>
+
+
+      <div class="bottom">
+      <center>
+                <span class="credit">Created By <a href="../index.html">Quara Healthcare</a>  </span>
+                <span class="far fa-copyright"></span> 2020 All rights reserved.
+              </center>
+      </div>
+      </div>
+
+      <!-- Google Maps API 
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmKTHcaBzxzV5EIG0Iy0L0IP4Q37DphTI&callback=initMap">
+      </script> -->
+
+
+    <!--AOS JS CDN-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!--Custom JavaScript-->
+    <script src="form.js"></script>
+    <script src="validation.js"></script>
+
+    <!--Google Maps API-->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB46jw9ayYN0RB7yN9Jvk7AHzWnRtdsDTU&callback=initMap">
+    </script>
+</body>
+    </html>
