@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="Home/Home.css">
+  <title>HOME PAGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+ <link rel="icon" href="Home/logotitle.png" type="image">
+ <script>
+    document.addEventListener('DOMContentLoaded',function formValidation(){
+      document.querySelector('.submit-button').onclick=function(){
+        var email =document.querySelector('#email');
+        var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(email.value.match(emailformat)){
+          alert("You have been subscribed");
+          return true;
+        }
+        else{
+          alert("You have entered an invalid email address!");
+          email.focus();
+          return false;
+        }
+     };
+   });
+ </script>
+</head>
+
+<body>
+
+  <!-- Navigation bar -->
+
+  <nav>
+    <img class="image" src="Home/logo.png" alt="">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <ul>
+      <div class="items">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="Covid/covid.html">Covid-19</a></li>
+        <li><a href="Login/Login-SignUp.html">Consultation</a></li>
+        <li><a href="Login/Login-SignUp.html">Pharmacy</a></li>
+        <li><a href="Teampage/teampage.html">Our Team</a></li>
+
+        <li> <button class="but" type="button" name="LOG IN" onclick="document.location='Login/Login-SignUp.html'" >LOG IN</button></li>
+        <li> <button class="but" type="button" name="SIGN UP" onclick="document.location='Login/Login-SignUp.html'">SIGN UP</button></li>
+        <li> <button class="but" type="button" name="LOG IN" ><a href="/adminLogin">ADMIN LOGIN</a></button></li>
+
+        <li>
+          <div class="sb-example-1">
+            <div class="search">
+              <input type="text" class="searchTerm" placeholder="Search...">
+              <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </nav>
+
+  <!-- slideshow -->
+
+  <div class="altmsg">
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <strong>Dear Patients,!</strong><span> We are happy to inform you that our OPD is fully functional and is being sanitised four times a week, but it is only for emergency cases. For regular follow ups please take online appointments
+        </span>
+        <img class="corona" src="Home/corona.png" alt="">
+    </div>
+  </div>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="Home/hospital.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="Home/pt.png" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="Home/bed.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000);
+    }
+
+  </script>
+
+  <div class="quote">
+    <h2>“The art of medicine consists of amusing the patient while nature cures the disease.”</h2>
+  </div>
+
+  <!-- Functional Buttons -->
+
+  <div class="container">
+    <div class="extra">
+      <button class="button button1" onclick="document.location='Login/Login-SignUp.html'">BOOK YOUR  APPOINTMENT <i class="fas fa-video"></i></button>
+      <button class="button button2" onclick="document.location='Login/Login-SignUp.html'">BOOK ALL YOUR MEDICINES NOW <i class="fas fa-pills"></i></button>
+      <button class="button button3" onclick="document.location='Covid/covid.html'">GET LATEST COVID-19 UPDATES <i class="fas fa-lightbulb"></i></button>
+    </div>
+  </div>
+
+  <!-- cards -->
+
+  <div class="cards">
+    <div class="enquire">
+      <h2>Do you have any query?</h2>
+      <button class="one" type="button" name="button" onclick="document.location='Form/form.html'">Enquire Now</button>
+
+    </div>
+    <div class="sub">
+      <h2>Subscribe for health tips, news and more</h2>
+      <div class="form__group">
+          <input type="text" id="email" placeholder="Email" type="text">
+        <button onlick "validate()" class="submit-button" type="submit" name="button">Subscribe</button>
+      </div>
+    </div>
+
+
+    <div class="emergency">
+      <h2>EMERGENCY</h2>
+      <h2>Call our 24/7 helpline number</h2>
+      <h2 class="phonec"><i class="fas fa-phone-alt"></i> 1906 0708 2999</h2>
+
+    </div>
+
+  </div>
+
+
+  <!-- Footer -->
+
+  <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>
+  About us</h2>
+  <div class="content">
+              <p class="abt">
+  Quara Healthcare is the best healthcare in the city run by the world's best doctors who have more than 20 years of experience</p>
+  <div class="social">
+                <a href="https://www.facebook.com/" target="_blank"><span class="fab fa-facebook-f"></span></a>
+                <a href="https://twitter.com/" target="_blank"><span class="fab fa-twitter"></span></a>
+                <a href="https://www.instagram.com/" target="_blank"><span class="fab fa-instagram"></span></a>
+                <a href="https://www.youtube.com/" target="_blank"><span class="fab fa-youtube"></span></a>
+              </div>
+  </div>
+  </div>
+  <div class="center box">
+            <h2>
+  Address</h2>
+  <div class="content">
+              <div class="place">
+                <span class="fas fa-map-marker-alt"></span>
+                <span class="text">Kormangala, Bangalore</span>
+              </div>
+  <div class="phone">
+                <span class="fas fa-phone-alt"></span>
+                <span class="text">+089-765432100</span>
+              </div>
+  <div class="email">
+                <span class="fas fa-envelope"></span>
+                <span class="text">quarahealthcare@gmail.com</span>
+              </div>
+  </div>
+  </div>
+  <div class="right box">
+            <h2>Navigation</h2>
+
+  <div class="content">
+             <a href="index.html"><div class="h"><u>Home</u></div></a>
+              <a href="Login/Login-SignUp.html"><div class="h">Consultation</div></a>
+                <a href="Login/Login-SignUp.html"><div class="h">Pharmacy</div></a>
+                 <a href="Covid/covid.html"><div class="h">Covid-19</div></a>
+                  <a href="Teampage/teampage.html"><div class="h">Our Team</div></a>
+
+                  </div>
+
+
+  <div class="bottom">
+  <center>
+            <span class="credit">Created By <a href="index.html">Quara Healthcare</a>  </span>
+            <span class="far fa-copyright"></span> 2020 All rights reserved.
+          </center>
+  </div>
+  </div>
+</footer>
+</body>
+
+</html>
