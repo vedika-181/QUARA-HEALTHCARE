@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+    *{
+  	    margin:0;
+  	    padding:0;
+  	    box-sizing:border-box;
+  	    color: #777;
+  	    font-family: 'Poppins', sans-serif;
+  	}
+  	html{
+  	    font-size: 10px;
+  	    /*font-family: "Roboto", sans-serif;*/
+  	}
+  	body {
+  		text-align: center !important;
+  		overflow-x: hidden;
+  	}
+  	section{
+  	    padding: 5rem 0;
+  	    background-color: white;
+
+  	}
+  	section:before{
+  	  content: '';
+  	  position: absolute;
+  	  top: 0;
+  	  left: 0;
+  	  width: 100%;
+  	  height: 30%;
+  	  background: linear-gradient(60deg,#80CED7,#007EA7);
+  	  border-radius: 0 0 50% 50%/0 0 100% 100%;
+  	  transform: scaleX(1.5);
+  	}
+  	.heading{
+  	    text-transform: uppercase;
+  	    font-size: 5.5rem;
+  	    font-weight: 2000;
+  	    letter-spacing: 3px;
+  	    margin-right: 110px;
+  	    margin-bottom: 10px;
+  	    margin-top: -5px;
+  	    text-align: center;
+  	    color:#333;
+  	    position: relative;
+  			font-weight: 600;
+  			font-family: 'Poppins', sans-serif;
+  			max-width:100%;
+        right:-20px;
+  	}
+  	.header img {
+  	  float: left;
+  	  width: 45%;
+  	  height: 160px;
+  	  object-fit: cover;
+  	  margin-top:-80px;
+  	  margin-left: -500px;
+  	}
+    .tab{
+  		margin-top: 100px;
+          margin-bottom: 8rem;
+  		border-collapse: separate;
+          box-sizing: border-box;
+          text-indent: initial;
+          border-spacing: 2px;
+  				font-size: 20px;
+  				color: black;
+  				border:2px solid black;
+  				padding: 40px;
+          position:relative;
+  				width:150%;
+          left:-120px;
+  	}
+  	.abc1 a{
+  		text-decoration: none;
+  	  text-transform: uppercase;
+  	  padding: 12px 36px;
+      position:absolute;
+  	  font-size: 18px;
+  	  letter-spacing: 2px;
+  	  color: white;
+  	  background: black;
+  		width:50%;
+      left:100px;
+      top:400px;
+  	}
+    .abc2 a{
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+  	  background: black;
+      font-size: 18px;
+  	  letter-spacing: 2px;
+      padding: 12px 36px;
+      position:absolute;
+      width:50%;
+      left:102px;
+    }
+
+    .form-group form{
+      padding: 50px;
+      background-color: white;
+      border-style: solid;
+      border: 2px solid #000000;
+      box-sizing: border-box;
+      position: absolute;
+      width:50%;
+      height:55%;
+      font-size: 20px;
+      top:650px;
+      margin-left: 25%;
+
+    }
+    .form-group input[type=email],.form-group input[type=password] {
+      width: 100%;
+      padding: 3px;
+      margin: 5px 0 20px 0;
+      border: none;
+      background: #f1f1f1;
+      color: black;
+      font-size: 20px;
+    }
+    .form-group input[type=email]:focus,.form-group input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    .form-group input[type=submit]{
+      text-decoration: none;
+  	  text-transform: uppercase;
+  	  padding: 12px 36px;
+      position:absolute;
+  	  font-size: 18px;
+  	  letter-spacing: 2px;
+  	  color: white;
+  	  background: black;
+      left:290px;
+    }
+    .btn{
+      text-decoration: none;
+  	  text-transform: uppercase;
+  	  padding: 12px 36px;
+  	  margin: 10px 0;
+  	  font-size: 18px;
+  	  letter-spacing: 2px;
+  	  color: white;
+  	  background: black;
+  		width:20%;
+    }
+    p{
+      font-size:40px;
+      color:black;
+      font-weight:600;
+      position:absolute;
+      top:540px;
+      left:55px;
+    }
+
+	</style>
+
+	<title>Welcome</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../views/css/main.css">
+</head>
+<body>
+  <section>
+	<div class="col-md-4 col-md-offset-4">
+		<div class="header">
+			<img src="logo.png" alt="logo" >
+			</div>
+		<div>
+			<h1 class="heading">PROFILE DETAILS</h1>
+		</div>
+		<div>
+			<center>
+				<table class="tab">
+					<tr><td>Name </td><td><%= name %></td></tr>
+					<tr><td>Email </td><td><%= email %></td></tr>
+                    <tr><td>Phone Number </td><td><%= phone %></td></tr>
+				</table>
+			</center>
+		</div>
+		<div class="abc1">
+			<a href="/home">Home</a>
+		</div>
+		<div class="abc2">
+			<a href="/logout">Logout</a>
+		</div>
+		<p>Change Password</p>
+        </div>
+        <div class="form-group">
+            <form id="form2" action="/changepass" method="post">
+                <input type="email" name="email" placeholder="E-mail" required="" class="form-control"><br/>
+                <input type="password" name="password" placeholder="Password" required="" class="form-control"><br/>
+                <input type="password" name="passwordConf" placeholder="Confirm Password" required="" class="form-control"><br/>
+                <input type="submit" value="Change" class="btn btn-success">
+            </form>
+        </div>
+        <div class="mssg bg-danger">
+            <span id="check"></span>
+        </div>
+	</div>
+</body>
+</html>
